@@ -49,7 +49,7 @@ public class Jeopardy implements ActionListener {
 		// 2. Give your frame a title
 		frame.setTitle("This! IIIIIIIISSSSSS JEOPARDY!");
 		// 3. Create a JPanel variable to hold the header using the createHeader method
-		JPanel quizpanel = createHeader("Coding");
+		quizPanel = createHeader("Coding");
 
 		// 4. Add the header component to the quizPanel
 
@@ -79,7 +79,7 @@ public class Jeopardy implements ActionListener {
 		button5 = createButton("$1000");
 
 		quizPanel.add(button5);
-		frame.add(quizpanel);
+		frame.add(quizPanel);
 		frame.setVisible(true);
 		frame.pack();
 
@@ -122,8 +122,8 @@ public class Jeopardy implements ActionListener {
 
 		JButton buttonPressed = (JButton) e.getSource();
 		// If the buttonPressed was the firstButton
-		if ((e.getSource()) == ("button1")) {
-			askQuestion("what type of object would the number '2' be?", "What is Integer", 200);
+		if ((e.getSource()) == (button1)) {
+			askQuestion("what type of object would the number '2' be?", "What is int?", 200);
 			button1.setText("");
 		}
 		// Call the askQuestion() method
@@ -132,11 +132,24 @@ public class Jeopardy implements ActionListener {
 		// score should change.
 
 		// If the buttonPressed was the secondButton
-		if ((e.getSource()) == ("secondButton")) {
+		if ((e.getSource()) == (secondButton)) {
 			// Call the askQuestion() method with a harder question
 			askQuestion("how do you create a pop-up that asks a question?", "what is showInputDialog?", 400);
 			secondButton.setText("");
 		}
+		if ((e.getSource()) == (button3)) {
+			askQuestion("If you want to set something as no variable, what name do you use?", "What is NULL?", 600);
+			button3.setText("");
+		}
+		if ((e.getSource()) == (button4)) {
+			askQuestion("What language is Java Based in??", "What is C?", 800);
+			button4.setText("");
+		}
+		if ((e.getSource()) == (button5)) {
+			askQuestion("What is the most basic coding language?", "What is BCPL?", 1000);
+			button5.setText("");
+		}
+		
 		// Clear the text on the button that was pressed (set the button text to
 		// nothing)
 
