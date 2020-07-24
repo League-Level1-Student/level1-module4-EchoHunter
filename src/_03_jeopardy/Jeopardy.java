@@ -146,7 +146,7 @@ public class Jeopardy implements ActionListener {
 			button4.setText("");
 		}
 		if ((e.getSource()) == (button5)) {
-			askQuestion("What is the most basic coding language?", "What is BCPL?", 1000);
+			askQuestion("What is the most basic coding language?", "What is Basic?", 1000);
 			button5.setText("");
 		}
 		
